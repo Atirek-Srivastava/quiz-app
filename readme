@@ -2,28 +2,26 @@ Before running this application, ensure you have the following installed on your
 
 Node.js: Download and Install Node.js
 
-
 Getting Started
 
 To set up and run this project locally, follow these steps:
 
-1) Clone the Repository:
+1. Clone the Repository:
 
 git clone https://github.com/Atirek-Srivastava/quiz-app.git
 Navigate to the Project Directory:
 
-2) cd quiz
+2. cd quiz
 
-3) Install Dependencies:
+3. Install Dependencies:
 
 npm install
 This will install all the required dependencies specified in the package.json file.
 
-4) Start the Application:  node app.js
-This will start the Node.js server.
+4. Start the Application: node app.js
+   This will start the Node.js server.
 
-5) Access the Application:  Open your web browser and navigate to http://localhost:3000 to use the quiz application.
-
+5. Access the Application: Open your web browser and navigate to http://localhost:3000 to use the quiz application.
 
 Project Structure
 
@@ -38,4 +36,3 @@ You can customize the quiz questions by modifying the questions.json file in the
 
 Support
 If you encounter any issues or have questions about this project, please feel free to contact me at atirek2109@gmail.com.
-

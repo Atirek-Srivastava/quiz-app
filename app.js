@@ -1,30 +1,30 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const path = require('path');
-const quizData = require('./data/questions.json');
+const express = require("express");
+const bodyParser = require("body-parser");
+const path = require("path");
+const quizData = require("./data/questions.json");
 
 const app = express();
 const PORT = 3000;
 
 // Serve static files (CSS, JS, images) from the 'public' directory
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 
 // Body parser middleware to parse URL-encoded form data
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Define routes
 // Serve the HTML form
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 // API endpoint to get quiz questions
-app.get('/api/questions', (req, res) => {
+app.get("/api/questions", (req, res) => {
   res.json(quizData.questions);
 });
 
 // API endpoint to handle quiz submission and display results
-app.post('/api/submit', (req, res) => {
+app.post("/api/submit", (req, res) => {
   const answers = req.body;
   const questions = quizData.questions;
   let score = 0;
@@ -38,7 +38,11 @@ app.post('/api/submit', (req, res) => {
       score++;
       results.push({ question: question.question, correct: true });
     } else {
-      results.push({ question: question.question, correct: false, correctAnswer: question.options[correctIndex] });
+      results.push({
+        question: question.question,
+        correct: false,
+        correctAnswer: question.options[correctIndex],
+      });
     }
   });
 
@@ -93,7 +97,7 @@ function generateResultsHTML(score, results) {
 
 // Error handling middleware for invalid routes
 app.use((req, res, next) => {
-  const error = new Error('Not Found');
+  const error = new Error("Not Found");
   error.status = 404;
   next(error); // Pass the error to the next middleware
 });
@@ -103,8 +107,8 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500).send({
     error: {
       status: err.status || 500,
-      message: err.message || 'Internal Server Error'
-    }
+      message: err.message || "Internal Server Error",
+    },
   });
 });
 

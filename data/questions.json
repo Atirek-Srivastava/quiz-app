@@ -1,127 +1,109 @@
 {
-    "questions": [
-        {
-          "question": "Which of the following is used to initialize a Node.js project and create a `package.json` file?",
-          "options": [
-            "npm install",
-            "npm init",
-            "node init",
-            "node start"
-          ],
-          "correctIndex": 1
-        },
-        {
-          "question": "How can you include external modules in a Node.js application?",
-          "options": [
-            "require('module_name')",
-            "import module_name from 'module_name'",
-            "use module_name",
-            "include module_name"
-          ],
-          "correctIndex": 0
-        },
-        {
-          "question": "What is the purpose of `npm` in Node.js?",
-          "options": [
-            "Node Project Manager",
-            "Node Package Manager",
-            "Node Program Manager",
-            "Node Project Module"
-          ],
-          "correctIndex": 1
-        },
-        {
-          "question": "How can you handle asynchronous operations in Node.js?",
-          "options": [
-            "Using callbacks",
-            "Using promises",
-            "Using async/await",
-            "All of the above"
-          ],
-          "correctIndex": 3
-        },
-        {
-          "question": "Which method is used to create a simple HTTP server in Node.js?",
-          "options": [
-            "createServer()",
-            "startServer()",
-            "initServer()",
-            "runServer()"
-          ],
-          "correctIndex": 0
-        },
-        {
-          "question": "What does `npm install --save` do when installing a package?",
-          "options": [
-            "Installs the package globally",
-            "Installs the package and saves it as a dependency in `package.json`",
-            "Installs the package for development purposes only",
-            "Installs the package and saves it as a devDependency in `package.json`"
-          ],
-          "correctIndex": 1
-        },
-        {
-          "question": "How can you read user input from the command line in a Node.js script?",
-          "options": [
-            "Using `console.log()`",
-            "Using `readline module`",
-            "Using `fs module`",
-            "Using `input()`"
-          ],
-          "correctIndex": 1
-        },
-        {
-          "question": "Which of the following modules is used for file operations in Node.js?",
-          "options": [
-            "http",
-            "fs",
-            "path",
-            "util"
-          ],
-          "correctIndex": 1
-        },
-        {
-          "question": "How can you start a Node.js application?",
-          "options": [
-            "node index.js",
-            "npm start",
-            "node app.js",
-            "All of the above"
-          ],
-          "correctIndex": 3
-        },
-        {
-          "question": "Which Node.js method is used to handle errors that occur asynchronously?",
-          "options": [
-            "try...catch",
-            "catchError()",
-            "process.on('uncaughtException')",
-            "process.exit()"
-          ],
-          "correctIndex": 2
-        },
-        {
-          "question": "What does the `process.argv` array contain in a Node.js script?",
-          "options": [
-            "The environment variables",
-            "The command-line arguments",
-            "The current working directory",
-            "The standard input/output streams"
-          ],
-          "correctIndex": 1
-        },
-        {
-          "question": "Which Node.js framework is commonly used for building web applications?",
-          "options": [
-            "Express.js",
-            "Angular.js",
-            "Vue.js",
-            "React.js"
-          ],
-          "correctIndex": 0
-        }
-      ]
-    
-    
-
-}    
+  "questions": [
+    {
+      "question": "Which of the following is used to initialize a Node.js project and create a `package.json` file?",
+      "options": ["npm install", "npm init", "node init", "node start"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How can you include external modules in a Node.js application?",
+      "options": [
+        "require('module_name')",
+        "import module_name from 'module_name'",
+        "use module_name",
+        "include module_name"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the purpose of `npm` in Node.js?",
+      "options": [
+        "Node Project Manager",
+        "Node Package Manager",
+        "Node Program Manager",
+        "Node Project Module"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How can you handle asynchronous operations in Node.js?",
+      "options": [
+        "Using callbacks",
+        "Using promises",
+        "Using async/await",
+        "All of the above"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which method is used to create a simple HTTP server in Node.js?",
+      "options": [
+        "createServer()",
+        "startServer()",
+        "initServer()",
+        "runServer()"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does `npm install --save` do when installing a package?",
+      "options": [
+        "Installs the package globally",
+        "Installs the package and saves it as a dependency in `package.json`",
+        "Installs the package for development purposes only",
+        "Installs the package and saves it as a devDependency in `package.json`"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How can you read user input from the command line in a Node.js script?",
+      "options": [
+        "Using `console.log()`",
+        "Using `readline module`",
+        "Using `fs module`",
+        "Using `input()`"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which of the following modules is used for file operations in Node.js?",
+      "options": ["http", "fs", "path", "util"],
+      "correctIndex": 1
+    },
+    {
+      "question": "How can you start a Node.js application?",
+      "options": [
+        "node index.js",
+        "npm start",
+        "node app.js",
+        "All of the above"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which Node.js method is used to handle errors that occur asynchronously?",
+      "options": [
+        "try...catch",
+        "catchError()",
+        "process.on('uncaughtException')",
+        "process.exit()"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does the `process.argv` array contain in a Node.js script?",
+      "options": [
+        "The environment variables",
+        "The command-line arguments",
+        "The current working directory",
+        "The standard input/output streams"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which Node.js framework is commonly used for building web applications?",
+      "options": ["Express.js", "Angular.js", "Vue.js", "React.js"],
+      "correctIndex": 0
+    }
+  ]
+}
