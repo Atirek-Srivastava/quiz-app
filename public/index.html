@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Node.js Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Node.js Quiz</h1>
+  <form id="quizForm" action="/api/submit" method="POST">
+    <div id="questionsContainer"></div>
+    <button type="submit">Submit</button>
+  </form>
+  
+  <script>
+    fetch('/api/questions')
+      .then(response => response.json())
+      .then(data => {
+        const questionsContainer = document.getElementById('questionsContainer');
+  
+        data.forEach((question, index) => {
+          const questionDiv = document.createElement('div');
+          questionDiv.innerHTML = `
+            <p>${index + 1}. ${question.question}</p>
+            ${question.options.map((option, i) => `
+              <label>
+                <input type="radio" name="question${index}" value="${i}">
+                ${option}
+              </label>
+            `).join('')}
+          `;
+          questionsContainer.appendChild(questionDiv);
+        });
+      });
+  </script>
+  
+</body>
+</html>
